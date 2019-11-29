@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../../core/providers/color_provider.dart';
 
 class ColorCard extends StatelessWidget {
   final MaterialColor colorItem;
@@ -19,14 +21,20 @@ class ColorCard extends StatelessWidget {
       colorItem.shade800,
       colorItem.shade900
     ];
-    return Container(
-      height: 100.0,
-      width: 100.0,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: colorItemList,
+    return Material(
+      child: GestureDetector(
+        onTap: () => Provider.of<ColorProvider>(context, listen: false)
+            .handleColor(colorItem),
+        child: Container(
+          height: 100.0,
+          width: 100.0,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: colorItemList,
+            ),
+          ),
         ),
       ),
     );
