@@ -75,20 +75,21 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   void _calculate() {
     switch (operationSymbol) {
       case '+':
-        result += double.tryParse(calcNum);
+        result += double.tryParse(calcNum) ?? 0;
         break;
       case '-':
-        result -= double.tryParse(calcNum);
+        result -= double.tryParse(calcNum) ?? 0;
         break;
       case '*':
-        result *= double.tryParse(calcNum);
+        result *= double.tryParse(calcNum) ?? 0;
         break;
       case '/':
-        result /= double.tryParse(calcNum);
+        result /= double.tryParse(calcNum) ?? 0;
         break;
       default:
         break;
     }
+    if (result.isNaN) result = 0;
     calcNum = result.toString();
     displayNum = calcNum;
   }
