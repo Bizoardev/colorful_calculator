@@ -20,13 +20,13 @@ class ColorSettingScreen extends StatelessWidget {
             ),
             itemCount: colorData.length + 1,
             itemBuilder: (context, index) {
-              if (index < colorData.length) {
-                final MaterialColor colorItem = colorData[index];
+              if (index == 0) {
+                return RandomColorCard();
+              } else {
+                final MaterialColor colorItem = colorData[index - 1];
                 return ColorCard(
                   colorItem: colorItem,
                 );
-              } else {
-                return RandomColorCard();
               }
             },
           ),
