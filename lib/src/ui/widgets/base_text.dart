@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ButtonText extends StatelessWidget {
-  final String buttonText;
-  const ButtonText({
+class BaseText extends StatelessWidget {
+  final String baseText;
+  const BaseText({
     Key key,
-    @required this.buttonText,
-  })  : assert(buttonText != null),
+    @required this.baseText,
+  })  : assert(baseText != null),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      buttonText,
+      baseText,
       style: TextStyle(
         fontSize: 32.0,
         fontWeight: FontWeight.bold,

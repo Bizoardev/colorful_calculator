@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ButtonIcon extends StatelessWidget {
-  final IconData buttonIcon;
-  const ButtonIcon({
+class BaseIcon extends StatelessWidget {
+  final IconData baseIcon;
+  const BaseIcon({
     Key key,
-    @required this.buttonIcon,
-  })  : assert(buttonIcon != null),
+    @required this.baseIcon,
+  })  : assert(baseIcon != null),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Icon(
-      buttonIcon,
+      baseIcon,
       size: 32.0,
     );
   }
