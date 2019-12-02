@@ -21,19 +21,17 @@ class ColorCard extends StatelessWidget {
       colorItem.shade800,
       colorItem.shade900
     ];
-    return Material(
-      child: GestureDetector(
-        onTap: () => Provider.of<ColorProvider>(context, listen: false)
-            .handleColor(colorItem),
-        child: Container(
-          height: 100.0,
-          width: 100.0,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: colorItemList,
-            ),
+    return GestureDetector(
+      onTap: () => Provider.of<ColorProvider>(context, listen: false)
+          .handleColor(colorItem),
+      child: Container(
+        height: 100.0,
+        width: 100.0,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: colorItemList,
           ),
         ),
       ),

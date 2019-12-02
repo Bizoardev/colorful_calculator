@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../core/color_data.dart';
 import '../widgets/color_card.dart';
 import '../widgets/random_color_card.dart';
 import '../../core/providers/color_provider.dart';
