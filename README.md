@@ -2,8 +2,7 @@
 
 Colorful Calculator is a simple calculator app built with Flutter.
 
-<img src="gif/calculator.gif" width="200">
-<img src="gif/color.gif" width="200">
+<img src="gif/calculator.gif" width="200"> <img src="gif/color.gif" width="200">
 
 
 ## Packages
